@@ -49,6 +49,15 @@ on early-init
 
 on init
 
+    # Compositor profiles use the two performance cores; leave clocks dynamic.
+    mkdir /dev/cpuset/surfaceflinger 0755 system system
+    write /dev/cpuset/surfaceflinger/cpus 6-7
+    write /dev/cpuset/surfaceflinger/mems 0
+    chown system system /dev/cpuset/surfaceflinger/tasks
+    chown system system /dev/cpuset/surfaceflinger/cgroup.procs
+    chmod 0664 /dev/cpuset/surfaceflinger/tasks
+    chmod 0664 /dev/cpuset/surfaceflinger/cgroup.procs
+
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0
