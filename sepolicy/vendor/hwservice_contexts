@@ -1,0 +1,2 @@
+# Stock NXP extension of the NFC HAL; use the existing NFC service policy.
+vendor.nxp.nxpnfclegacy::INxpNfcLegacy u:object_r:hal_nfc_hwservice:s0

@@ -1,0 +1,3 @@
+# Motorola's hardware detector sets ro.vendor.hw.nfc before the conditional
+# NFC HAL startup. The HAL and framework already read this NFC property type.
+set_prop(vendor_init_hw, vendor_nfc_nq_prop)

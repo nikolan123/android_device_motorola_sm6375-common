@@ -1,0 +1,2 @@
+# Read by the stock NFC HAL. Avoid granting access to default_prop.
+ro.vendor.hw.nfc u:object_r:vendor_nfc_nq_prop:s0 exact string
