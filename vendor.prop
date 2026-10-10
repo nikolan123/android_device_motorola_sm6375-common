@@ -294,14 +294,15 @@ debug.sf.early.sf.duration=10500000
 debug.sf.earlyGl.app.duration=13666666
 debug.sf.earlyGl.sf.duration=10500000
 debug.sf.enable_advanced_sf_phase_offset=0
-debug.sf.enable_gl_backpressure=1
+# Avoid GPU queue stalls on rhodec with window blur enabled.
+debug.sf.enable_gl_backpressure=0
 debug.sf.force_cpuset_system_default=1
 debug.sf.force_populate_color_modes=true
 debug.sf.frame_rate_multiple_threshold=120
 debug.sf.high_speed_scroll_factor=0
 debug.sf.late.app.duration=13666666
 debug.sf.late.sf.duration=10500000
-debug.sf.predict_hwc_composition_strategy=0
+debug.sf.predict_hwc_composition_strategy=1
 debug.sf.scroll_boost_refreshrate=120
 debug.sf.touch_boost_refreshrate=90
 debug.sf.use_phase_offsets_as_durations=1
